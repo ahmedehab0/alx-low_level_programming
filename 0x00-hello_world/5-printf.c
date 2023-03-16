@@ -1,5 +1,5 @@
- 1 #include <stdio.h>
-  2 /**
+#include <stdio.h>
+ /**
   3 *main-entery
   *
   5 *Return:Always 0
