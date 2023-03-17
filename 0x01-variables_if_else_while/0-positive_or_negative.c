@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
-  *main - prints n
+  *main -Entery point
+  *description: prints whether n is positive,negative, or zero
   *return : (0) success
   */
 int main(void)
