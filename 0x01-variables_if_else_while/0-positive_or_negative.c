@@ -2,8 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
-  *main -entery
-  *
+  *main - prints n
   *return : (0) success
   */
 int main(void)
