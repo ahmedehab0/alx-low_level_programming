@@ -2,10 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 /**
-  *main -Entery point
-  *description: prints whether n is positive,negative, or zero
-  *return : (0) success
-  */
+
+ * main-is the main function.
+ *
+ * Return: always returns 0 or 1
+ */
 int main(void)
 {
 	int n;
