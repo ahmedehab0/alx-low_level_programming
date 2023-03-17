@@ -2,9 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 /**
-
  * main-is the main function.
- *
+ * discriiption: prints whether n is positive,negative, or zeroo
  * Return: always returns 0 or 1
  */
 int main(void)
