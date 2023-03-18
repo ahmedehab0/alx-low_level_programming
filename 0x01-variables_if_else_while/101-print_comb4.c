@@ -20,7 +20,7 @@ int main(void)
 				putchar(digit2);
 				putchar(digit3);
 
-	if (digit1 == 56 && digit2 == 57 && digit3 == 58)
+	if (digit1 == 55 && digit2 == 56 && digit3 == 57)
 	continue;
 
 				putchar(44);
