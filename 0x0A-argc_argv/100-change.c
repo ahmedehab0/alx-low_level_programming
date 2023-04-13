@@ -24,8 +24,8 @@ else
 {
 	j--;
 }
-printf("%d\n", count);
 }
+printf("%d\n", count);
 else
 {
 printf("Error\n");
