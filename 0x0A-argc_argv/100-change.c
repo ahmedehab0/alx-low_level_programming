@@ -27,7 +27,9 @@ else
 printf("%d\n", count);
 }
 else
-printf("error");
-
+{
+printf("Error\n");
+return (1);
+}
 return (0);
 }
