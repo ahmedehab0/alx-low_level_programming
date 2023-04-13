@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 int i = atoi(argv[1]), count = 0,
 changes[] = {1, 2, 5, 10, 25}, j = 4;
 if (argc == 2)
+{
 while (i != 0)
 {
 if (i - changes[j] > 0)
@@ -26,6 +27,7 @@ else
 }
 }
 printf("%d\n", count);
+}
 else
 {
 printf("Error\n");
