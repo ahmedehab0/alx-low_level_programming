@@ -28,7 +28,11 @@ else
 }
 printf("%d\n", count);
 }
-else
+else if (i < 0)
+{
+	printf("0\n");
+}
+else if ( argc != 2)
 {
 printf("Error\n");
 return (1);
