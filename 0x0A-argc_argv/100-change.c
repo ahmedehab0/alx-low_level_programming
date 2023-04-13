@@ -16,7 +16,7 @@ if (argc == 2)
 {
 while (i != 0)
 {
-if (i - changes[j] > 0)
+if (i - changes[j] >= 0)
 {
 i -= changes [j];
 count++;
