@@ -18,7 +18,7 @@ if (argc != 2)
 	return (1);
 }
 int i = atoi(argv[1]);
-else if (argc == 2 && i >= 0)
+if (argc == 2 && i >= 0)
 {
 while (i != 0)
 {
