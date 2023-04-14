@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 int i, count = 0,
 changes[] = {1, 2, 5, 10, 25}, j = 4;
-if (argc == 2 && i >= 0)
+if (argc == 2)
 {
 	i = atoi(argv[1]);
 while (i != 0)
