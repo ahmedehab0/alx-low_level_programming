@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-count = 0,
+int count = 0,
 changes[] = {1, 2, 5, 10, 25}, j = 4;
 if (argc != 2)
 {
