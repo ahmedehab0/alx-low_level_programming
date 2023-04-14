@@ -12,7 +12,12 @@ int main(int argc, char *argv[])
 {
 int i = 0, count = 0,
 changes[] = {1, 2, 5, 10, 25}, j = 4;
-if (argc == 2)
+if (argc != 2)
+{
+	printf("Error\n");
+	return (1);
+}
+else if (argc == 2)
 {
 	i = atoi(argv[1]);
 while (i != 0)
@@ -32,11 +37,6 @@ printf("%d\n", count);
 else if (i < 0)
 {
 	printf("0\n");
-}
-else if (argc != 2)
-{
-printf("Error\n");
-return (1);
 }
 return (0);
 }
