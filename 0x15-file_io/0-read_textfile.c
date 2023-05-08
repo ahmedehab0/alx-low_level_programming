@@ -8,43 +8,32 @@
  * to the POSIX standard output.
  * Return: the actual number of letters it could read and print, 0 otherwise
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-if (filename == NULL) 
-{
-return (0);
-}
-FILE *fp = fopen(filename, "r");
+	ssize_t file, let, w;
+	char *text;
 
-if (fp == NULL) 
-{
-return (0);
-}
-char *buffer = malloc(letters);
+	text = malloc(letters);
+	if (text == NULL)
+		return (0);
 
-if (buffer == NULL) 
-{
-fclose(fp);
-return (0);
-}
-ssize_t bytes_read = fread(buffer, 1, letters, fp);
+	if (filename == NULL)
+		return (0);
 
-if (bytes_read == 0) 
-{
-fclose(fp);
-free(buffer);
-return (0);
-}
-ssize_t bytes_written = fwrite(buffer, 1, bytes_read, stdout);
+	file = open(filename, O_RDONLY);
 
-if (bytes_written != bytes_read) 
-{
-fclose(fp);
-free(buffer);
-return (0);
-}
-fclose(fp);
-free(buffer);
-return (bytes_written);
+	if (file == -1)
+	{
+		free(text);
+		return (0);
+	}
 
+	let = read(file, text, letters);
+
+	w = write(STDOUT_FILENO, text, let);
+
+	close(file);
+
+	return (w);
 }
