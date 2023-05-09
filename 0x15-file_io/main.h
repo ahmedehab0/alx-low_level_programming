@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define buffer_size 1024
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
