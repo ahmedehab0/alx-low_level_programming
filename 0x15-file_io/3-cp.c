@@ -17,7 +17,7 @@ int _close(int fd)
 	return (0);
 }
 /**
-* main - program that copies the content of a file to another file
+* main - program that copies the content of a file to another
 * @ac: num argument
 * @av: string argument
 * Return: 0
@@ -55,7 +55,7 @@ int main(int ac, char **av)
 			exit(98);
 		}
 		bytes_written = write(fd_2, buffer, bytes_read);
-		if (bytes_written < bytes_read || bytes_written == -1)
+		if (bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
