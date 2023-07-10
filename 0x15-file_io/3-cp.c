@@ -14,7 +14,7 @@ int _close(int fd)
 		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (1);
+	return (0);
 }
 /**
 * main - program that copies the content of a file to another file
