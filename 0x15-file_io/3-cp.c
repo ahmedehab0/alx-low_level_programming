@@ -11,7 +11,7 @@ int _close(int fd)
 	f = close(fd);
 	if (f == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d", fd);
+		dprintf(2, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (1);
@@ -42,8 +42,8 @@ int main(int ac, char **av)
 	bytes_read = read(fd_1, buffer, 1024);
 	if (bytes_read == -1)
 	{
-		_close(fd_1);
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
+		_close(fd_1);
 		exit(98);
 	}
 	fd_2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -55,8 +55,8 @@ int main(int ac, char **av)
 	bytes_written = write(fd_2, buffer, bytes_read);
 	if (bytes_written == -1 || bytes_written < bytes_read)
 	{
-		_close(fd_2);
 		dprintf(2, "Error: can't write to %s\n", av[2]);
+		_close(fd_2);
 		exit(99);
 	}
 _close(fd_1);
