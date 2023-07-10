@@ -52,12 +52,14 @@ int main(int ac, char **av)
 		if (bytes_read == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			_close(fd_1);
 			exit(98);
 		}
 		bytes_written = write(fd_2, buffer, bytes_read);
 		if (bytes_written < bytes_read || bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			_close(fd_2);
 			exit(99);
 		}
 	}
