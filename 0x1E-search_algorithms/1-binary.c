@@ -25,7 +25,7 @@ int binary_search(int *array, size_t size, int value)
 		puts("");
 
 		if (array[m] == value)
-			return (value);
+			return (m);
 
 		if (array[m] < value)
 		{
